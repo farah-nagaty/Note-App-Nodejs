@@ -19,6 +19,12 @@ async function dbconnection() {
     }
     
 }
+
+const authRoutes = require ("./routes/authRoutes");
+
+app.use("/api", authRoutes);
+
+
 dbconnection();
 // Run Server "Listen"
 
