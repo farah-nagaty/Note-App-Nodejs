@@ -19,10 +19,12 @@ async function dbconnection() {
     }
     
 }
-
+//Routes
 const authRoutes = require ("./routes/authRoutes");
+const noteRoutes = require ("./routes/noteRoutes");
 
 app.use("/api", authRoutes);
+app.use("/api", noteRoutes);
 
 
 dbconnection();
